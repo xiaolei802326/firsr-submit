@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* table tr:nth-child(odd) {
+            background-color: yellow;
+        }
+        table tr:nth-child(even) {
+            background-color: red;
+        }
+        table tr:hover {
+            background-color: blue;
+        } */
+    </style>
+    <script>
+        // 华氏度=9/5*摄氏度+32
+        // var n = prompt('请输入数字');
+        // alert(n);
+        // var m = 9 / 5 * n +32;
+        // document.write(m);
+
+        // for (var i = 1; i <= 10; i++) {
+        //     document.write('*');
+        // };
+        // document.write('</br>');
+        // for (var i = 1; i <= 10; i++) {
+        //     document.write('*');
+        // }
+
+
+        // for (var j = 1; j <= 5; j++) {
+        //     for (var i = 1; i <= 10; i++) {
+        //         document.write('*');
+        //     }
+        //     document.write('</br>')
+        // }
+
+        // for (var j = 1; j <= 9; j++) {
+        //     for (var i = 1; i <= j; i++) {
+        //         document.write('*');
+        //     }
+        //     document.write('</br>')
+        // }
+
+        // 九九乘法表公式： 列数 x 行数 = 列数 * 行数
+        // for (var j = 1; j <= 9; j++) {
+        //     for (var i = 1;  i <= j; i++) {
+        //         document.write(i+'X'+j+'='+i*j);
+        //     }
+        //     document.write('</br>')
+        // }
+        // document.write('<table border="3">')
+        //     for (var j = 1; j <= 9; j++) {//    
+        //         document.write('<tr>')
+        //             for (var i = 1; i<= j; i++) { // 列
+        //                 document.write('<td>')
+        //                     document.write(i+'X'+j+'='+j*j)
+        //                 document.write('</td>')
+        //             }
+        //             // document.write('</br>')
+        //         document.write('<tr>')
+        //     }
+        // document.write('</table>')
+
+        // document.write('<table border="2" width="800">');
+        // for(var j = 1; j <= 9; j++){     // j 代表行数
+        //     document.write('<tr>');
+        //     for(var i = 1; i <= j; i++){    // i 代表列数
+        //         document.write('<td align="center">');
+        //             document.write(i+'X'+j+'='+i*j);
+        //         document.write('</td>');
+        //     }
+        //     document.write('</tr>')
+        // }
+        // document.write("</table>");
+
+    </script>
+    
+    <script>
+        // 冒泡排序：原理：i ---> 趟数 = 长度-1；
+        //                j ---> 次数 = 长度-趟数，次数作为下标
+        // var arr = [28,26,2,6,88,9];
+        // 从小到大 
+        // for (var i = 1; i < arr.length; i++) {  // i 趟数
+        //     for (var j = 0; j < arr.length - i; j++) { // j 次数 / 下标
+        //         if(arr[j] > arr[j+1]) {
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+        // 从大到小
+        // for (var i = 1; i < arr.length; i++) {
+        //     for (var j = 0; j < arr.length - i; j++) {
+        //         if (arr[j] < arr[j + 1]) {
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] =  temp;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+        
+
+        // js基础---return练习
+        // 1. 获取数组的最大值，并返回（练习return）
+        // var arr = [26,56,2,89,1,6];
+        // function getMax (reArr) {
+        //     // 假设最大值
+        //     var max = reArr[0];
+        //     // 遍历
+        //     for (var i = 0; i < reArr.length; i++) {
+        //         if (max < reArr[i]) {
+        //             max = reArr[i];
+        //         }
+        //     }
+        //     return max;
+        // }
+        // var result = getMax(arr);
+        // document.write(result);
+
+        // 2. 将数组中的偶数添加到一个新数组中返回，并计算新数组的总和
+        // var arr = [25,68,33,12,66,55];
+        // function getArr (reArr) {
+        //     // 定义新的数组
+        //     var newArr = [];
+        //     // 遍历,找偶数
+        //     for (var i = 0; i <reArr.length; i++) {
+        //         if (reArr[i] % 2 == 0) {
+        //             newArr[newArr.length] = reArr[i];
+        //         }
+        //     }
+        //     // 求和
+        //     var sum = 0;
+        //     for (var i = 0; i < newArr.length; i++) {
+        //         sum += newArr[i];
+        //     }
+        //     document.write('总和为'+sum+'</br>');
+        //     return newArr;
+
+        // }
+        // var resultArr = getArr(arr);
+        // document.write(resultArr)
+
+        // 3. 函数：求和
+        // function getSum (n,m) {
+        //     var sum = n + m;
+        //     return sum;
+        // }
+        // var result = getSum(3,4);
+        // document.write(result);
+
+        // 4. 参数不确定时用 arguments 获取 [arguments伪数组]
+        // function fn () {
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         alert(arguments[i])
+        //     }
+        // }
+        // fn(23,26,5,49,56,9,6,65)
+
+        // 5. 求任意数的最大值
+        // function getMax () {
+        //     // 定义最大值
+        //     var max = arguments[0];
+        //     // 遍历
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (max < arguments[i]) {
+        //             max = arguments[i]
+        //         }
+        //     }
+        //     return max;
+        // }
+        // var max1 = getMax(1,56,88,4,49);
+        // document.write(max1+'</br>');
+        // var max2 = getMax(1,56,88,499,49);
+        // document.write(max2);
+
+        // 6. 求任意数的和
+        // function getSum () {
+        //     var sum = 0;
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         sum += arguments[i]
+        //     }
+        //     return sum;
+        // }
+        // var result1 = getSum(1,2,3,5,4);
+        // document.write(result1);
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html> 
